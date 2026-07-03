@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
 @ExtendWith(ResultAnalyzer.class)
 public class MainTest {
 
@@ -147,6 +150,5 @@ public class MainTest {
         List<String> results = StringSet.findUniqueWords().stream().collect(Collectors.toList());
         assertEquals(results.get(0), "a");
         assertEquals(results.get(results.size()-1), "wrote");
-
     }
 }
